@@ -1,0 +1,127 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100%;
+    background-color: #26262f;
+    color: #fff8f0;
+    text-align: center;
+    position: relative; 
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+#nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+#nav-items li {
+    list-style-type: none;
+    flex: 1;
+    text-align: center;
+    
+
+}
+
+#nav-items li a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #ffcf99;
+}
+
+#nav-items li:hover {
+    background-color: #0e0e11;
+}
+
+.content1 {
+    background: linear-gradient(to bottom right, #f8d9b7,white);
+    width: auto;
+    padding: 10px;
+    margin: 20px;   
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    overflow: auto; 
+    letter-spacing: 1.25px;
+    word-spacing: 2px;
+
+}
+
+#img1 {
+    float:right;
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#bmi-cal {
+    display: block;
+    background-color: white;
+    width: 250px;
+    height: 40px;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px black;
+    font-size: 1rem;
+    
+}
+#bmi-cal:hover {
+    color: white;
+    background-color: black;
+}
+
+.content2 {
+    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
+    
+    width: auto;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    overflow: auto;
+    letter-spacing: 1.25px;
+    word-spacing: 5px;
+}
+#cal-track {
+    background-color: white;
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px black;
+    font-size: 1rem;
+    
+}
+#cal-track:hover {
+    color: white;
+    background-color: black;
+}
+
+#img2 {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+
