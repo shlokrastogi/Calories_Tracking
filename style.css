@@ -18,6 +18,8 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 2em;
+    letter-spacing: 2px;
+    word-spacing: 10px;
 }
 
 #nav-items {
@@ -49,11 +51,16 @@ h1 {
     background-color: #0e0e11;
 }
 
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .content1 {
-    background: linear-gradient(to bottom right, #f8d9b7,white);
-    width: auto;
+    flex: 1;
     padding: 10px;
-    margin: 20px;   
+    margin: 10px;
+    background: linear-gradient(to bottom right, #f8d9b7,white);
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     overflow: auto; 
@@ -61,6 +68,11 @@ h1 {
     word-spacing: 2px;
 
 }
+
+/* .content1:hover {
+    
+    
+}  */
 
 #img1 {
     float:right;
@@ -70,10 +82,10 @@ h1 {
     margin-bottom: 10px;
 }
 
-#bmi-cal {
+#bmi-cal-btn {
     display: block;
     background-color: white;
-    width: 250px;
+    width: 70%;
     height: 40px;
     margin: 20px auto;
     border: 2px solid black;
@@ -82,27 +94,26 @@ h1 {
     font-size: 1rem;
     
 }
-#bmi-cal:hover {
+#bmi-cal-btn:hover {
     color: white;
     background-color: black;
 }
 
 .content2 {
-    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
-    
-    width: auto;
+    flex: 1;
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
+    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     overflow: auto;
     letter-spacing: 1.25px;
     word-spacing: 5px;
 }
-#cal-track {
+#cal-track-btn {
     background-color: white;
     display: block;
-    width: 250px;
+    width: 70%;
     height: 40px;
     margin: 20px auto;
     border: 2px solid black;
@@ -111,7 +122,7 @@ h1 {
     font-size: 1rem;
     
 }
-#cal-track:hover {
+#cal-track-btn:hover {
     color: white;
     background-color: black;
 }
@@ -125,3 +136,8 @@ h1 {
     
 }
 
+@media (max-width: 800px) {
+    .content1 , .content2 {
+        flex: 100%;
+    }
+}
