@@ -121,4 +121,10 @@ h1 {
     .content1 , .content2, .content3, .content4 {
         flex: 100%;
     }
+    .content1 , .content3 {
+        background: linear-gradient(to bottom right, #f8d9b7,white);
+    }
+    .content2 , .content4 {
+        background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
+    }
 }
