@@ -118,7 +118,7 @@ h1 {
 }
 
 @media (max-width: 800px) {
-    .content1 , .content2 {
+    .content1 , .content2, .content3, .content4 {
         flex: 100%;
     }
 }
