@@ -8,10 +8,12 @@
 
 header {
     width: 100%;
+    z-index: 1;
     background-color: #26262f;
     color: #fff8f0;
     text-align: center;
-    position: relative; 
+    position: sticky;
+    top: 0;
 }
 
 h1 {
@@ -50,39 +52,51 @@ h1 {
 #nav-items li:hover {
     background-color: #0e0e11;
 }
+#nav-items li {
+    text-decoration: dashed;
+}
 
 .container1 {
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: row;
 }
 
-.content1 {
-    flex: 1;
+.content1, .content2, .content3, .content4{
+    flex: 1 1 calc(50% - 20px);
     padding: 10px;
     margin: 10px;
-    background: linear-gradient(to bottom right, #f8d9b7,white);
+    width: 50%;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     overflow: auto; 
     letter-spacing: 1.25px;
     word-spacing: 2px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .content1:hover {
-    
-    
-}  */
+.content1, .content4{
+    background: linear-gradient(to bottom right, #f8d9b7,white);
+}
 
-#img1 {
+.content2, .content3 {
+    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
+}
+
+.content1:hover , .content2:hover , .content3:hover, .content4:hover {
+    transform: scale(1.01);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#img1 , #img2 , #img3 , #img4 {
     float:right;
-    width: 150px;
-    height: 150px;
+    width: 30%;
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
-#bmi-cal-btn {
+.home-btn {
     display: block;
     background-color: white;
     width: 70%;
@@ -90,50 +104,17 @@ h1 {
     margin: 20px auto;
     border: 2px solid black;
     border-radius: 20px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 1px 2px rgb(94, 94, 94);
     font-size: 1rem;
-    
-}
-#bmi-cal-btn:hover {
-    color: white;
-    background-color: black;
+    cursor: pointer;
 }
 
-.content2 {
-    flex: 1;
-    padding: 10px;
-    margin: 10px;
-    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px black;
-    overflow: auto;
-    letter-spacing: 1.25px;
-    word-spacing: 5px;
+.home-btn:active {
+    box-shadow: 0px 0px;
 }
-#cal-track-btn {
-    background-color: white;
-    display: block;
-    width: 70%;
-    height: 40px;
-    margin: 20px auto;
-    border: 2px solid black;
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px black;
-    font-size: 1rem;
-    
-}
-#cal-track-btn:hover {
-    color: white;
+.home-btn:hover {
     background-color: black;
-}
-
-#img2 {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    
+    color: white;
 }
 
 @media (max-width: 800px) {
