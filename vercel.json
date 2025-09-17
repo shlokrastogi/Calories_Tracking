@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/Calorie_tracking.html" }
+    { "source": "/", "destination": "/index.html" }
   ]
 }
