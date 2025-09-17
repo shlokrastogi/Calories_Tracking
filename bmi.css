@@ -1,0 +1,41 @@
+.bmi-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 20px;
+}
+
+#bmi-cal-heading {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+label::after {
+    content: ' *';
+    white-space: pre;
+    color: red;
+}
+
+input {
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.bmi-cal{
+    background: linear-gradient(to bottom right, #ffe2c3,white);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+/* Responsive for phones */
+
+@media (max-width: 800px) {
+    .bmi-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}

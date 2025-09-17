@@ -1,10 +1,17 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styling */
 
 header {
     width: 100%;
@@ -14,6 +21,7 @@ header {
     text-align: center;
     position: sticky;
     top: 0;
+    left: 0;
 }
 
 h1 {
@@ -37,7 +45,6 @@ h1 {
     flex: 1;
     text-align: center;
     
-
 }
 
 #nav-items li a {
@@ -52,22 +59,26 @@ h1 {
 #nav-items li:hover {
     background-color: #0e0e11;
 }
-#nav-items li {
-    text-decoration: dashed;
+
+
+main {
+  flex: 1;
+  padding: 20px;
 }
 
-.container1 {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    flex-direction: row;
+/* Cards Container Styling */
+
+.home-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 20px;
 }
 
-.content1, .content2, .content3, .content4{
-    flex: 1 1 calc(50% - 20px);
+/* Cards Styling */
+
+.home-content{
     padding: 10px;
-    margin: 10px;
-    width: 50%;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     overflow: auto; 
@@ -76,27 +87,39 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content1, .content4{
-    background: linear-gradient(to bottom right, #f8d9b7,white);
+#content1 {
+    background: linear-gradient(to bottom right, #ffe2c3,white);
 }
 
-.content2, .content3 {
+#content2{
     background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
 }
 
-.content1:hover , .content2:hover , .content3:hover, .content4:hover {
+#content3{
+    background: linear-gradient(to bottom right, #abfbf7,white);
+}
+
+#content4 {
+    background: linear-gradient(to bottom right, rgb(253, 251, 179), white);
+}
+
+.home-content:hover {
     transform: scale(1.01);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-#img1 , #img2 , #img3 , #img4 {
+/* Image Styling */
+
+.img {
     float:right;
     width: 30%;
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
-.home-btn {
+/* Button Styling */
+
+.btn {
     display: block;
     background-color: white;
     width: 70%;
@@ -109,22 +132,51 @@ h1 {
     cursor: pointer;
 }
 
-.home-btn:active {
+.btn:active {
     box-shadow: 0px 0px;
+    
 }
-.home-btn:hover {
+.btn:hover {
     background-color: black;
     color: white;
 }
 
+.home.btn span::after {
+  content: ""; 
+  margin-left: 0;
+  opacity: 0;
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+
+.home.btn:hover span::after {
+  content: "\00bb";
+  margin-left: 10px;
+  opacity: 1;
+}
+
+/* Footer Styling */
+
+footer {
+    width: 100%;
+    padding: 15px auto;
+    color: #fff8f0;
+    display: flex;
+    background-color: #26262f;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer p {
+    margin: 0px;
+    line-height: 50px;
+}
+
+/* Responsive for phones */
+
 @media (max-width: 800px) {
-    .content1 , .content2, .content3, .content4 {
-        flex: 100%;
+    .home-container {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .content1 , .content3 {
-        background: linear-gradient(to bottom right, #f8d9b7,white);
-    }
-    .content2 , .content4 {
-        background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
-    }
+    
 }
