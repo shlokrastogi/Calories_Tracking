@@ -27,6 +27,7 @@ input {
     padding: 10px;
     border: 2px solid black;
     border-radius: 10px;
+    box-shadow: 2px 2px black;
 }
 
 .content-card{
@@ -96,13 +97,19 @@ input {
 }
 
 .bmi-detailing > p {
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     word-spacing: 0.3rem;
     margin-bottom: 30px;
 }
+
+.bmi-detailing > ul > li {
+    letter-spacing: 0.05rem;
+    word-spacing: 0.3rem;
+    margin-bottom: 10px;
+}
 /* Responsive for phones */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .bmi-container {
         grid-template-columns: repeat(1, 1fr);
     }
