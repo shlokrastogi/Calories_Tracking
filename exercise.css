@@ -1,13 +1,9 @@
 
 
-h4 {
+h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
     
-}
-
-.exe-container1 {
-    margin: 20px auto;
 }
 
 
@@ -15,7 +11,7 @@ h4 {
 .exe-container1 > .exe-intro {
     background: url(workout2.png)  no-repeat center center /cover;
     box-shadow: 3px 3px 10px black;
-    height: 70vh;
+    height: max-content;
     padding: 40px;
     padding-right: 50%;
     border-radius: 10px;
@@ -23,7 +19,6 @@ h4 {
 }
 
 .exe-intro > h2  {
-
     color: white;
     line-height: 2rem;
     font-weight: 600;
@@ -37,9 +32,9 @@ h4 {
 .exe-intro > p {
     color: white;
     line-height: 2rem;
-    font-size: 1.2em;
-    word-spacing: 1rem;
-    letter-spacing: 0.05em;
+    font-size: 1.3em;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.02em;
 }
 
 .exe-container1 > .exe-benefits {
@@ -57,7 +52,7 @@ h4 {
 }
 
 
-.exe-container2 > h4 {
+.exe-container2 > h3 {
     color: white;
     border-radius: 50px;
     width: fit-content;
@@ -79,6 +74,7 @@ h4 {
     border-radius: 25px;
     background-color: white;
 }
+
 #type-home:hover {
     background: linear-gradient(to bottom right, rgb(253, 251, 179), white);
 }
@@ -89,7 +85,8 @@ h4 {
      background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
 }
 
-#type-home > h5 , #type-gym > h5, #type-advance > h5{
+#type-home > h4 , #type-gym > h4, #type-advance > h4{
+    /* padding-bottom: 10px; */
     font-size: 1.2em;
 }
 
@@ -106,7 +103,7 @@ h4 {
     padding: 10px 0px 10px 10px;
 }
 
-.exe-cal-burned > h4 {
+.exe-cal-burned > h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
@@ -169,11 +166,16 @@ table tr td:hover {
     left: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .exe-container1 > .exe-intro {
         padding: 20px;
         height: 70vh;
+        
     }
+    .exe-container1 > .exe-intro > p {
+        font-size: 1em;
+    }
+
     .exe-workout-types {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr 1fr;

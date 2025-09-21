@@ -1,11 +1,12 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-size: 1.05em;
+    font-size: 1em;
     box-sizing: border-box;
 }
 
 body {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -18,21 +19,22 @@ body {
 /* Header Styling */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     background-color: #26262f;
     color: #fff8f0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    left: 0;
+    
 }
 
 h1 {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: 0.05rem;
     word-spacing: 0.3rem;
 }
@@ -52,18 +54,20 @@ h1 {
 
 
 #nav-items li {
-    list-style-type: none;
     flex: 1;
+    list-style-type: none;
     text-align: center;
-    padding: 0px 15px;
+    padding: 0px 20px;
     scroll-behavior: smooth;
 }
 
 
 #nav-items li a {
-    display: block;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     width: 100%;
+    white-space: nowrap;
     padding: 10px 0;
     font-size: 1em;
     color: #ffcf99;
@@ -78,6 +82,74 @@ main {
   flex: 1;
   padding: 20px;
 }
+
+
+/* .home-intro {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    
+} */
+
+
+.home-intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(63, 63, 63, 0.607) , rgba(79, 79, 79, 0.599), rgba(0, 0, 0, 1));
+    margin-bottom: 30px;
+    border-radius: 15px;
+    z-index: 1;
+    box-shadow: 3px 3px 5px black;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.home-intro:hover {
+    transform: scale(1.01);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.home-intro > h2 {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+
+}
+
+.home-intro > img {
+    display: flex;
+    height: 400px;
+    width: auto;
+    /* overflow: hidden; */
+    z-index: 50;
+}
+
+.home-intro > #overlaying-heading{
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    position: absolute;
+    text-align: center;
+    color: transparent;
+    font-size: 4em;
+    z-index: 100;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 1);
+    -webkit-text-stroke-width: 1px;
+    
+}
+
 
 /* Cards Container Styling */
 
@@ -102,6 +174,28 @@ main {
     word-spacing: 2px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.content-card:hover {
+    transform: scale(1.01);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#content1 {
+    background: linear-gradient(to bottom right, #ffe2c3,white);
+}
+
+#content2{
+    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
+}
+
+#content3{
+    background: linear-gradient(to bottom right, #abfbf7,white);
+}
+
+#content4 {
+    background: linear-gradient(to bottom right, rgb(253, 251, 179), white);
+}
+
 
 .home-card-content > h3 {
     font-size: 1.3em;
@@ -144,42 +238,17 @@ main {
 }
 
 .home-content-btn span::after {
-  content: ""; 
-  margin-left: 0;
-  opacity: 0;
-  transition: margin-left 0.3s ease, opacity 0.3s ease;
+    content: "";
+    margin-left: 0;
+    opacity: 0;
+    transition: margin-left 0.3s ease, opacity 0.3s ease;
 }
 
 .home-content-btn:hover span::after {
-  content: "\00bb";
-  margin-left: 10px;
-  opacity: 1;
+    content: "\00bb";
+    margin-left: 10px;
+    opacity: 1;
 }
-
-#content1 {
-    background: linear-gradient(to bottom right, #ffe2c3,white);
-}
-
-#content2{
-    background: linear-gradient(to bottom right, rgb(208, 255, 218), white);
-}
-
-#content3{
-    background: linear-gradient(to bottom right, #abfbf7,white);
-}
-
-#content4 {
-    background: linear-gradient(to bottom right, rgb(253, 251, 179), white);
-}
-
-.content-card:hover {
-    transform: scale(1.01);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-
-
-
 
 
 /* Footer Styling */
@@ -203,7 +272,15 @@ footer p {
 
 /* Responsive for phones */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+
+    .home-intro > h2 {
+        font-size: 3em;
+    }
+    .home-intro > #overlaying-heading {
+        font-size: 3em;
+    }
+
     .home-container {
         grid-template-columns: repeat(1, 1fr);
     }

@@ -20,11 +20,10 @@ label::after {
 }
 
 input {
-    height: 1.3em;
+    height: 2em;
+    width: 70%;
     margin-top: 5px;
     margin-bottom: 20px;
-    border: 1px solid black;
-    
 }
 
 .bmi-cal{
@@ -68,7 +67,7 @@ input {
 
 #bmi-description-content-text {
     padding-left: 25px;
-    font-size: 0.8em;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
