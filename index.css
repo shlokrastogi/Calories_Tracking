@@ -206,6 +206,7 @@ main {
 
 .home-card-content > img{
     align-self: flex-start;
+    margin-left: 10px;
     float: right;
     width: 30%;
 }

@@ -106,14 +106,14 @@ input {
 }
 
 .bmi-detailing > p {
-    font-size: 1.25rem;
+    font-size: 1.03em;
     letter-spacing: 0.05rem;
     word-spacing: 0.3rem;
     margin-bottom: 30px;
 }
 
 .bmi-detailing > ul > li {
-    font-size: 1.25rem;
+    font-size: 1.02rem;
     margin: 20px auto 20px 20px;
     letter-spacing: 0.05rem;
     word-spacing: 0.3rem;
